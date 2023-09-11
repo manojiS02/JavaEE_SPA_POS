@@ -22,12 +22,12 @@ public class CustomerDAOImpl implements CustomerDAO {
     }
 
     @Override
-    public boolean save(Connection connection, Customer dto) throws SQLException, ClassNotFoundException {
+    public boolean save(Connection connection, Customer entity) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(connection, "INSERT INTO Customer VALUES (?,?,?,?)", entity.getCustId(), entity.getCustName(), entity.getAddress(), entity.getSalary());
     }
 
     @Override
-    public boolean update(Connection connection, Customer dto) throws SQLException, ClassNotFoundException {
+    public boolean update(Connection connection, Customer entity) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(connection, "UPDATE Customer SET cusName=?, cusAddress=?, cusSalary=? WHERE cusID=?", entity.getCustName(), entity.getAddress(), entity.getSalary(), entity.getCustId());
     }
 
@@ -42,7 +42,7 @@ public class CustomerDAOImpl implements CustomerDAO {
     }
 
     @Override
-    public boolean delete(Connection connection, String s) throws SQLException, ClassNotFoundException {
+    public boolean delete(Connection connection, String id) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(connection, "DELETE FROM Customer WHERE cusID=?", id);
     }
 }

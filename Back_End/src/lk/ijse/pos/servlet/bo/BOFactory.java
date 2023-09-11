@@ -18,8 +18,7 @@ public class BOFactory {
     public SuperBO getBO(BOTypes types){
         switch (types){
             case CUSTOMER:
-                return new CustomerBOImpl();
-
+               return new CustomerBOImpl();
             default:
                 return null;
         }

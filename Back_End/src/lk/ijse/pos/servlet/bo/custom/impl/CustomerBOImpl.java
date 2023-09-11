@@ -1,5 +1,6 @@
 package lk.ijse.pos.servlet.bo.custom.impl;
 
+import lk.ijse.pos.servlet.bo.SuperBO;
 import lk.ijse.pos.servlet.bo.custom.CustomerBO;
 import lk.ijse.pos.servlet.dao.DAOFactory;
 import lk.ijse.pos.servlet.dao.custom.CustomerDAO;
@@ -10,7 +11,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class CustomerBOImpl implements CustomerBO {
+public class CustomerBOImpl implements CustomerBO, SuperBO {
 
     private final CustomerDAO customerDAO = (CustomerDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTYpes.CUSTOMER);
     @Override
@@ -25,12 +26,12 @@ public class CustomerBOImpl implements CustomerBO {
     }
 
     @Override
-    public boolean saveCustomer(Connection connection, CustomerDTO customerDTO) throws SQLException, ClassNotFoundException {
+    public boolean saveCustomer(Connection connection, CustomerDTO customer) throws SQLException, ClassNotFoundException {
         return customerDAO.save(connection, new Customer(customer.getCusId(), customer.getCusName(), customer.getAddress(), customer.getSalary()));
     }
 
     @Override
-    public boolean updateCustomer(Connection connection, CustomerDTO customerDTO) throws SQLException, ClassNotFoundException {
+    public boolean updateCustomer(Connection connection, CustomerDTO customer) throws SQLException, ClassNotFoundException {
         return customerDAO.update(connection, new Customer(customer.getCusId(), customer.getCusName(), customer.getAddress(), customer.getSalary()));
     }
 

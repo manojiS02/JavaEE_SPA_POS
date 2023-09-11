@@ -8,7 +8,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class Customer {
-    String CusId;
+    String CustId;
     String CustName;
     String address;
     double salary;
