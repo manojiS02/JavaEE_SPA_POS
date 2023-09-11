@@ -99,7 +99,7 @@
 
                             <!-- Example single danger button -->
                             <div class="btn-group mx-2">
-                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="background: #d60f0f;">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="background: black;">
                                     ID
                                 </button>
                                 <ul class="dropdown-menu">
@@ -110,7 +110,7 @@
                                 </ul>
                             </div>
                             <input class="form-control me-2" id="customerSearchTxt" type="search" placeholder="Search" aria-label="Search" >
-                            <button class="btn btn-outline-danger me-2" id="customerSearch-btn" type="Button">Search</button>
+                            <button class="btn btn-outline-dark me-2" id="customerSearch-btn" type="Button">Search</button>
                         </form>
                     </div>
                 </nav>
@@ -134,7 +134,7 @@
 
         <section id="customerInputSection" class="col-3 justify-content-center my-4 ">
             <section class="col-12 card">
-                <div class="badge bg-warning text-wrap fs-5 fw-semibold p-4">
+                <div class="badge bg-secondary text-wrap fs-5 fw-semibold p-4">
                     Input Details
                 </div>
 
@@ -194,7 +194,7 @@
 
                             <!-- Example single danger button -->
                             <div class="btn-group mx-2">
-                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"style="background: #d60f0f;">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"style="background: black;">
                                     Code
                                 </button>
                                 <ul class="dropdown-menu">
@@ -205,7 +205,7 @@
                                 </ul>
                             </div>
                             <input class="form-control me-2" id="itemSearchTxt" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-danger me-2" id="itemSearch-btn" type="Button">Search</button>
+                            <button class="btn btn-outline-dark me-2" id="itemSearch-btn" type="Button">Search</button>
                         </form>
                     </div>
                 </nav>
@@ -229,7 +229,7 @@
 
         <section id="inputSection" class="col-3 justify-content-center my-4 ">
             <section class="col-12 card">
-                <div class="badge bg-warning text-wrap fs-5 fw-semibold p-4">
+                <div class="badge bg-primary text-wrap fs-5 fw-semibold p-4">
                     Input Details
                 </div>
 
@@ -282,7 +282,7 @@
 
         <!-- invoice content -->
         <section class="col-10 col-md-5 col-lg-4 p-3 mt-4 bg-white shadow-lg">
-            <h3 class="text-center bg-warning p-2 text-light rounded-3 fs-4">Invoice Details</h3>
+            <h3 class="text-center bg-primary p-2 text-light rounded-3 fs-4">Invoice Details</h3>
             <div class="row mt-1">
                 <div class="col-12 col-md-6 col-lg-6">
                     <label for="orderId" class="form-label">Order ID :</label>
@@ -328,7 +328,7 @@
 
         <!-- select items content -->
         <section class="col-10 col-md-5 col-lg-4 p-3 mt-4 bg-white shadow-lg">
-            <h3 class="text-center bg-warning p-2 text-light rounded-3 fs-4">Select Items</h3>
+            <h3 class="text-center bg-primary p-2 text-light rounded-3 fs-4">Select Items</h3>
             <div class="row mt-1">
                 <div class="col-12 col-md-6 col-lg-6">
                     <label for="itemCodeCMB" class="form-label">Item Code :</label>
@@ -425,7 +425,7 @@
         <!--Cart Details Table-->
         <section class="d-flex flex-column h-50 col-10 col-xl-11 bg-white shadow-lg align-items-center
         pt-3 mt-4 table-bordered table-hover table-responsive">
-            <h3 class="text-center bg-warning p-2 text-light rounded-3 col-12 fs-4">Order Details</h3>
+            <h3 class="text-center bg-primary p-2 text-light rounded-3 col-12 fs-4">Order Details</h3>
             <div class="row overflow-auto h-60 col-12 col-lg-12 rounded-2 justify-content-around">
                 <table class="table table-striped table-hover mb-4 table-dark" style="height: 20px;">
                     <thead class="text-white green-hd" >
@@ -450,9 +450,9 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <!--jQuery for javaScript-->
 <script src="assets/js/jquery-3.7.0.min.js"></script>
-<script src="controllers/Customer.js"></script>
-<script src="controllers/Item.js"></script>
-<script src="controllers/PurchaseOrder.js"></script>
+<script src="controller/Customer.js"></script>
+<script src="controller/Item.js"></script>
+<script src="controller/PlaceOrder.js"></script>
 <script>
     /*This will only run once, When the DOM is ready for JavaScript code to execute.*/
     $(function () {
